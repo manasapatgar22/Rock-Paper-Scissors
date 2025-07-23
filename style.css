@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9eb9f7;
+  color: #030101;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+header {
+  background: #ffffffbb;
+  color: rebeccapurple;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-weight:900;
+}
+
+.score-board {
+  margin: 40px auto;
+  border: 3px solid #020101;
+  border-radius: 8px;
+  width: 320px;
+  font-size: 36px;
+  padding: 20px;
+  position: relative;
+}
+
+.badge {
+  background: #1513ac;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#user-label {
+  left: -10%;
+}
+
+#computer-label {
+  right: -10%;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  min-height: 50px;
+}
+
+.choices {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.choice {
+  border: 3px solid #000;
+  border-radius: 50%;
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: grey;
+}
+
+.choice i {
+  color: rgb(12, 9, 9);
+  font-size: 60px;
+}
+
+#reset-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #e2584d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+  background-color: #c13c36;
+}
+
+
+/* Game feedback styles */
+.winningStyles {
+  border-color: #4dcc7d;
+  background-color: #043507;
+  box-shadow: 0 0 20px #4dcc7d;
+}
+
+.losingStyles {
+  border-color: #c52e2e;
+  background-color: #2e0303;
+  box-shadow: 0 0 20px #c52e2e;
+}
+
+.drawStyles {
+  border-color: #444;
+  background-color: #222;
+  box-shadow: 0 0 20px #444;
+}
+
+
+@media screen and (max-width: 600px) {
+  .choices {
+    gap: 10px;
+  }
+
+  .choice img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .score-board {
+    font-size: 24px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+
+  #reset {
+    width: 100%;
+  }
+}
